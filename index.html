@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entrenamiento deportivo profesional. Mejora tu rendimiento hoy.">
+  <title>SportPro | Entrena al Máximo</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 10%;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      color: #22c55e;
+    }
+
+    header a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+    }
+
+    .btn {
+      background: #22c55e;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      color: black;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #16a34a;
+      color: white;
+    }
+
+    section {
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    .features {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .feature {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      width: 280px;
+      transition: transform 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #22c55e, #4ade80);
+      color: black;
+      padding: 60px 20px;
+    }
+
+    .cta h2 {
+      margin-bottom: 15px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+    }
+
+    @media(max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>SportPro</h1>
+  <nav>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h2>Transforma Tu Cuerpo Hoy</h2>
+    <p>Entrenamiento profesional para resultados reales</p>
+    <button class="btn">Empieza Ahora</button>
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section id="beneficios">
+  <h2>¿Por qué elegirnos?</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>Planes Personalizados</h3>
+      <p>Entrenamientos adaptados a tus objetivos.</p>
+    </div>
+    <div class="feature">
+      <h3>Entrenadores Expertos</h3>
+      <p>Profesionales certificados.</p>
+    </div>
+    <div class="feature">
+      <h3>Resultados Reales</h3>
+      <p>Mejora tu rendimiento rápidamente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Empieza tu cambio hoy</h2>
+  <p>Únete ahora y recibe tu primer plan gratis</p>
+  <button class="btn">Quiero comenzar</button>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <form onsubmit="return enviarFormulario(event)">
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Correo" required>
+    <button class="btn">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 SportPro</p>
+</footer>
+
+<script>
+  function enviarFormulario(e){
+    e.preventDefault();
+    alert("Te contactaremos pronto 💪");
+  }
+</script>
+
+</body>
+</html>
